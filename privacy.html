@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>privacy - ai-nspired</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-switcher">🌙</button>
+  </div>
+  <main>
+    <div class="page-container">
+      <h1>privacy</h1>
+      <p>we take your privacy seriously. here's the simple truth about how we handle your information:</p>
+      
+      <h2>in plain terms:</h2>
+      <ul>
+        <li>we <strong>don't</strong> sell your data to anyone</li>
+        <li>we <strong>don't</strong> use cookies to track you</li>
+        <li>we <strong>don't</strong> store your personal information</li>
+        <li>we <strong>won't</strong> contact you unless you ask us to</li>
+      </ul>
+
+      <h2>why this matters:</h2>
+      <p>
+        in a world where your searches and data are often used against you, we believe in providing a safe alternative. 
+        our site is designed to respect your privacy while still delivering powerful AI-driven insights.
+      </p>
+
+      <h2>what we actually do:</h2>
+      <ul>
+        <li>we only collect what's necessary to make the site work</li>
+        <li>we use technical data to improve your experience</li>
+        <li>we implement strong security measures</li>
+        <li>we give you full control over your information</li>
+      </ul>
+
+      <h2>our promise to you:</h2>
+      <p>
+        the only time we'll ever use what you do on our site is to make your experience better. 
+        and if you ask us to send you something? well, that's the only time we'll reach out - 
+        and even then, only if you explicitly opt in.
+      </p>
+
+      <p>
+        <strong>tl;dr:</strong> we don't sell your data, we don't track you, and we don't store your information. 
+        your privacy is our priority.
+      </p>
+
+      <a href="/" class="home-link">← return home</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+      <a href="terms.html">terms</a>
+      <a href="privacy.html">privacy</a>
+    </div>
+    <p>© 2025 all rights reserved</p>
+  </footer>
+  <script>
+    // Theme switching functionality
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const body = document.body;
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    themeSwitcher.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+    themeSwitcher.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      themeSwitcher.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+</body>
+</html>

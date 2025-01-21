@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>terms - ai-nspired</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-switcher">🌙</button>
+  </div>
+  <main>
+    <div class="page-container">
+      <h1>terms</h1>
+      <p>by using this site, you're joining us in creating a better future. here's what that means:</p>
+
+      <h2>your responsibility</h2>
+      <ul>
+        <li>you're in charge of your journey here and the ripples it creates</li>
+        <li>use this space wisely and with good intentions</li>
+        <li>be mindful of how your actions affect others</li>
+      </ul>
+
+      <h2>our commitment</h2>
+      <ul>
+        <li>we provide this space as a platform for learning and growth</li>
+        <li>we'll continue to improve and evolve the site</li>
+        <li>we'll maintain transparency about how things work</li>
+      </ul>
+
+      <h2>what we don't do</h2>
+      <ul>
+        <li>we don't make any guarantees about outcomes</li>
+        <li>we don't claim to have all the answers</li>
+        <li>we don't take responsibility for how you use the information</li>
+      </ul>
+
+      <h2>important legal stuff</h2>
+      <ul>
+        <li>this site is provided "as is" without warranties of any kind</li>
+        <li>we're not liable for any damages resulting from your use of the site</li>
+        <li>we reserve the right to change these terms at any time</li>
+        <li>any attempt to bring harm to me, us, or the company will fail miserably</li>
+      </ul>
+
+      <h2>tl;dr</h2>
+      <p>
+        use this site responsibly. we're here to help and educate, but we're not making any promises. 
+        we'll keep improving things, but you're in charge of your own journey. let's create positive ripples together.
+      </p>
+
+      <a href="/" class="home-link">← return home</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+      <a href="terms.html">terms</a>
+      <a href="privacy.html">privacy</a>
+    </div>
+    <p>© 2025 all rights reserved.</p>
+  </footer>
+  <script>
+    // Theme switching functionality
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const body = document.body;
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    themeSwitcher.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+    themeSwitcher.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      themeSwitcher.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+</body>
+</html>
